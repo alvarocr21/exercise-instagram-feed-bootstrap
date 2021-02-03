@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+
+    <!-- bootstarp -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="galeriaClick(true);">
+    <!-- Cabecera -->
+    <header class="fixed-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand logo" href="#"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+            <div class="d-flex">
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Create a New Post
+              </button>
+
+              <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-cog"></i>
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Log out</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="form-floating my-3 mx-3">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea"
+            ></textarea>
+          </div>
+          <div class="modal-body">
+            <label class="btn btn-outline-secondary" for="camara">
+              <i class="fas fa-camera-retro"></i>
+            </label>
+
+            <label class="btn btn-outline-secondary" for="localiza">
+              <i class="fas fa-map-marker-alt"></i>
+            </label>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuerpo -->
+    <div class="cuerpo">
+      <!-- Recuadros -->
+      <div class="recuadros">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic radio toggle button group"
+        >
+          <!-- <button type="button" class="btn btn-secondary" onclick="galeriaClick(true);"> <i class="fas fa-th"></i></button>
+        <button type="button" class="btn btn-secondary" onclick="galeriaClick(false);"><i class="fas fa-square"></button> -->
+          <input
+            type="radio"
+            class="btn-check"
+            name="btngaleria"
+            id="galeria"
+            autocomplete="off"
+            onclick="galeriaClick(false);"
+          />
+          <label class="btn btn-outline-secondary" for="galeria">
+            <i class="fas fa-th"></i>
+          </label>
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="btngaleria"
+            id="columnagaleria"
+            autocomplete="off"
+            checked
+            onclick="galeriaClick(true);"
+          />
+          <label class="btn btn-outline-secondary" for="columnagaleria"
+            ><i class="fas fa-square"></i
+          ></label>
+        </div>
+      </div>
+
+      <!-- fotos -->
+      <div id="contenedor1" class="contenedor1">
+        <div class="card my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-inline">Card title</h5>
+              <span class="text-end d-inline float-end">14/12</span>
+            </div>
+            <img
+              src="https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-title">23 likes</p>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  ><i class="far fa-heart"></i> Comment...</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-inline">Card title</h5>
+              <span class="text-end d-inline float-end">14/12</span>
+            </div>
+            <img
+              src="https://www.nationalgeographic.com.es/medio/2019/09/09/bull-dog-ingles_f310dc07_480x480.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-title">23 likes</p>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  ><i class="far fa-heart"></i> Comment...</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-inline">Card title</h5>
+              <span class="text-end d-inline float-end">14/12</span>
+            </div>
+            <img
+              src="https://www.nationalgeographic.com.es/medio/2019/06/19/fiordo-de-inglefield-bredning-groenlandia_866667d3_480x480.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-title">23 likes</p>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  ><i class="far fa-heart"></i> Comment...</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-inline">Card title</h5>
+              <span class="text-end d-inline float-end">14/12</span>
+            </div>
+            <img
+              src="https://www.nationalgeographic.com.es/medio/2019/06/19/fiordo-de-inglefield-bredning-groenlandia_866667d3_480x480.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-title">23 likes</p>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  ><i class="far fa-heart"></i> Comment...</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-inline">Card title</h5>
+              <span class="text-end d-inline float-end">14/12</span>
+            </div>
+            <img
+              src="https://www.hogarmania.com/archivos/201912/razas-perro-848x477x80xX.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-title">23 likes</p>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  ><i class="far fa-heart"></i> Comment...</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title d-inline">Card title</h5>
+              <span class="text-end d-inline float-end">14/12</span>
+            </div>
+            <img
+              src="https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/09/08/razasperrososospeluches-focus-0-0.63-696-394.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-title">23 likes</p>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted"
+                  ><i class="far fa-heart"></i> Comment...</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contenedor2" class="contenedor2">
+        <div class="row">
+          <div class="col-4 d-flex justify-content-center">
+            <div class="tarjetaCompleta">
+              <div class="cuerpoTarjetaCompleta">
+                <img
+                  src="https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="tarjetaCompleta">
+              <div class="cuerpoTarjetaCompleta">
+                <img
+                  src="https://www.nationalgeographic.com.es/medio/2019/09/09/bull-dog-ingles_f310dc07_480x480.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="tarjetaCompleta">
+              <div class="cuerpoTarjetaCompleta">
+                <img
+                  src="https://www.nationalgeographic.com.es/medio/2019/06/19/fiordo-de-inglefield-bredning-groenlandia_866667d3_480x480.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 d-flex justify-content-center">
+            <div class="tarjetaCompleta">
+              <div class="cuerpoTarjetaCompleta">
+                <img
+                  src="https://s1.eestatic.com/2020/08/06/curiosidades/mascotas/perros-mascotas-animales_510959893_157148040_1706x960.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="tarjetaCompleta">
+              <div class="cuerpoTarjetaCompleta">
+                <img
+                  src="https://www.hogarmania.com/archivos/201912/razas-perro-848x477x80xX.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="tarjetaCompleta">
+              <div class="cuerpoTarjetaCompleta">
+                <img
+                  src="https://sumedico.blob.core.windows.net.optimalcdn.com/images/2020/09/08/razasperrososospeluches-focus-0-0.63-696-394.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
